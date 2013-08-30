@@ -1,0 +1,844 @@
+﻿/*
+	This CSS file, which was automatically created by Wakanda, allows you to share CSS styles for all the widgets on the Pages in your project.
+	The CSS styles that are created when you create a Widget Skin are placed in this file too.
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
+
+body#waf-body.fixMin {
+	min-height: 1124px;
+}
+
+body#waf-body * {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+body#waf-body .isLink {
+	cursor: pointer;
+}
+
+body#waf-body .sm-error {
+	border-color: red !important;
+	border-width: 1px;
+	border-style: solid;
+}
+
+body#waf-body .colorpicker {
+	z-index: 10;
+}
+
+body#waf-body .smColorPicker.nostyle {
+	background-color: transparent;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-style: none;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+
+body#waf-body .icon_expand {
+	transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+ /* IE 9 */
+	-webkit-transform: rotate(-90deg);
+ /* Safari and Chrome */
+	-o-transform: rotate(-90deg);
+ /* Opera */
+	-moz-transform: rotate(-90deg);
+ /* Firefox */;
+}
+
+body#waf-body select:not(.ui-datepicker-month):not(.ui-datepicker-year) {
+	width: 117px;
+	height: 33px;
+	border: 1px rgb(223, 223, 223) solid;
+	border-radius: 4px;
+	-webkit-appearance: none;
+	background: white url(/images/select.png) no-repeat 85% 50%;
+	box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+	font-size: 15px !important;
+	font-weight: 300;
+	padding-left: 14px !important;
+	color: #676767 !important;
+}
+
+.tabContainer.selected.waf-role-paramsTab .waf-widget.waf-richText {
+	color: #929292 !important;
+}
+
+/**
+ * -------------------------------------------------------
+ * @Component Search input
+ * -------------------------------------------------------
+ */
+
+/* Style the search input field. */
+.waf-container.search {
+	background-color: transparent;
+	border: none;
+}
+
+.search form {
+	border: none;
+	height: 100%;
+	float: left;
+	background-color: white;
+	border-radius: 4px;
+}
+
+.search form .field {
+	float: left;
+	height: 100%;
+	line-height: 100%;
+	text-indent: 10px;
+	font-family: arial, sans-serif;
+	font-size: 14px;
+	color: #333;
+	border: none;
+	margin: 1px;
+}
+ 
+/* Style the "X" text button next to the search input field */
+.search form .delete {
+	float: left;
+	width: 14px;
+	height: 100%;
+	line-height: 100%;
+	margin-right: 1px;
+	padding: 0 10px 0 10px;
+	font-family: "Lucida Sans", "Lucida Sans Unicode",sans-serif;
+	font-size: 22px;
+	background: #fff;
+	border: none;
+	display: table;
+}
+
+.search form .delete span {
+	display: table-cell;
+	vertical-align: middle;
+}
+ 
+/* Style the "X" text button next to the search input field */
+.search button {
+	height: 100%;
+	right: 0px;
+	position: absolute;
+	width: 10%;
+	border-radius: 4px;
+	background-color: #54a4ff;
+	background-image: url( /images/search-icon.png );
+	border: none;
+}
+/* Set default state of "X" and hide it */
+.search form .delete span {
+	color: #A1B9ED;
+	cursor: pointer;
+	display: none;
+}
+/* Set the hover state of "X" */
+.search form .delete span:hover {
+	color: #36c;
+}
+/* Clear floats */
+.fclear {
+	clear: both;
+}
+
+
+/**
+ * -------------------------------------------------------
+ * @Component Range Slider
+ * -------------------------------------------------------
+ */
+
+.ui-rangeSlider-label {
+	top: 0px;
+	bottom: auto !important;
+}
+
+.ui-rangeSlider-container {
+	margin: 37px 15px !important;
+}
+
+.ui-rangeSlider-arrow {
+	margin-top: 37px;
+}
+
+.ui-rangeSlider-label {
+	font-size: 12px !important;
+}
+
+.ui-rangeSlider-arrow-inner {
+	border-width: 8px !important;
+	margin-top: -9px !important;
+	margin-left: -7px !important;
+}
+
+.ui-rangeSlider-container,
+.ui-rangeSlider-arrow {
+	height: 15px !important;
+}
+
+.ui-rangeSlider-bar {
+	height: 12px !important;
+}
+
+ /************ File Uploader ************/
+.waf-fileUpload input {
+	width: 100%;
+	height: 100%;
+}
+
+ /************ DataGrid ************/
+.waf-theme.default .waf-dataGrid-body {
+	overflow-x: hidden;
+}
+
+.waf-theme.default .waf-dataGrid-cell .remove {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.waf-theme.default .waf-dataGrid-row:not(.waf-state-active):not(.waf-state-hover) .waf-dataGrid-cell .remove {
+	display: none;
+}
+
+.waf-theme.default .waf-dataGrid-cell.editing.colorPicker .remove {
+	display: none;
+}
+
+.waf-theme.default .waf-dataGrid-cell.editing.colorPicker input[type=text] {
+	width: 100% !important;
+}
+
+ /************************************
+ **				Combobox			**
+ *************************************/
+.waf-theme.default .waf-combobox-list .ui-menu-item a.ui-state-hover {
+	background-image: none;
+	background-color: rgb(152, 200, 255);
+	color: #676767;
+}
+
+.waf-theme.default .waf-combobox-list .ui-menu-item a {
+	line-height: 2;
+	font-size: 13px;
+}
+
+.waf-theme.default .waf-combobox-list {
+	border-color: rgb(230, 230, 230);
+	box-shadow: none;
+}
+
+.waf-theme.default .waf-combobox.waf-state-active {
+	text-shadow: none;
+}
+ 
+/* @theme:waf-role-smCombo="default inherited" */
+
+.waf-theme.default .waf-combobox.waf-role-smCombo {
+	background-image: none;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(230, 230, 230);
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	font-size: 15px;
+	color: rgb(103, 103, 103);
+	font-weight: normal;
+	background-color: rgb(255, 255, 255);
+	border-radius: 4px;
+}
+
+.waf-theme.default .waf-combobox.waf-role-smCombo input {
+	font-size: 13px !important;
+}
+
+.waf-theme.default .waf-combobox.waf-role-smCombo button {
+	border: none;
+	right: 0px;
+}
+
+.waf-theme.default .waf-combobox.waf-role-smCombo button span:not(.ui-button-text),
+.waf-theme.default .waf-combobox.waf-role-smCombo .ui-icon {
+	background-image: url(/walib/WAF/lib/jquery-ui/themes/base/images/ui-icons_888888_256x240.png) !important;
+}
+
+.waf-theme.default .waf-combobox.waf-role-smCombo.waf-state-default .ui-icon,
+.waf-theme.default .waf-combobox.waf-role-smCombo.waf-state-hover .ui-icon {
+	background-position: 27% 7%;
+}
+
+.waf-theme.default .waf-combobox.waf-role-smCombo.waf-state-active .ui-icon {
+	background-position: 0% 7%;
+}
+ /************************************
+ **				Rich Text			**
+ *************************************/
+
+/* @theme:waf-role-link="default inherited" */
+.waf-theme.default .waf-richText.waf-role-link {
+	cursor: pointer;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	text-decoration: underline;
+	color: rgb(86, 86, 255);
+}
+
+/* @theme:waf-role-menuItem-text="default inherited" */
+.waf-theme.default .waf-richText.waf-role-menuItem-text {
+	font-weight: bold;
+	color: #929292;
+	font-size: 18px;
+	border-width: 0px;
+}
+
+ /************************************
+ **				Container			**
+ *************************************/
+
+/* @theme:waf-role-noStyle="default inherited" */
+.waf-theme.default .waf-container.waf-role-noStyle {
+	background-color: transparent;
+	border-style: none;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-width: 0px;
+}
+
+/* @theme:waf-role-smSearchbutton="default inherited" */
+.waf-theme.default .waf-container.waf-role-smSearchbutton {
+	cursor: pointer;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-style: none;
+	border-color: transparent;
+	-moz-border-radius: 3px  !important;
+	-webkit-border-radius: 3px !important;
+	border-radius: 3px !important;
+	background-color: rgb(84, 164, 255);
+}
+
+/* @theme:waf-role-menuItem="default inherited" */
+.waf-theme.default .waf-container.waf-role-menuItem {
+	-moz-border-radius: 40px;
+	-webkit-border-radius: 40px;
+	border-radius: 40px;
+	border-style: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	cursor: pointer;
+}
+
+.waf-theme.default .waf-container.waf-role-menuItem.disabled {
+	opacity: 0.3;
+}
+
+.waf-theme.default .waf-container.waf-role-menuItem:hover:not(.disabled) .waf-richText.waf-role-menuItem-text,
+.waf-theme.default .waf-container.waf-role-menuItem.selected .waf-richText.waf-role-menuItem-text {
+	color: rgb(255, 255, 255);
+}
+
+/* @theme:waf-role-matrixItem="default inherited" */
+.waf-theme.default .waf-container.waf-role-matrixItem {
+	cursor: pointer;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0px;
+	-moz-borde-top-right-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-style: none;
+}
+
+.waf-theme.default .waf-container.waf-role-matrixItem.waf-state-selected {
+	border: 5px rgb(86, 163, 255) solid !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.waf-theme.default .waf-container:not(.waf-state-selected).waf-role-matrixItem:hover {
+	/*background-color: rgba(202, 202, 202, 0.42);*/;
+}
+
+.waf-theme.default .waf-container.waf-role-matrixItem:hover .showOnHover {
+	visibility: visible;
+}
+
+.waf-theme.default .waf-container.waf-role-matrixItem .showOnHover {
+	visibility: hidden;
+}
+
+/* @theme:waf-role-smContainerTV="default inherited" */
+.waf-container.waf-role-smContainerTV {
+	top: 28px;
+	bottom: 5px;
+	left: 5px;
+	right: 0px;
+	border: 0px;
+	position: absolute;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-border-radius: 0px;
+	border: none;
+	background-color: rgb(238, 238, 238);
+}
+
+/* @theme:waf-role-paramsTab="default inherited" */
+.waf-theme.default .waf-container.waf-role-paramsTab {
+	border: none;
+	background-color: #929292;
+	-moz-border-bottom-left-radius: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-top-left-radius: 4px !important;
+	-moz-border-top-left-radius: 4px !important;
+	-webkit-border-top-left-radius: 4px !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	cursor: pointer;
+}
+
+.waf-theme.default .waf-container.waf-role-paramsTab.selected {
+	background-color: #e5e5e5;
+}
+
+.waf-theme.default .waf-container.waf-role-tabContainer {
+	border: 1px solid rgb(209, 209, 209);
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+ /************************************
+ **				Matrix				**
+ *************************************/
+ 
+/* @theme:waf-role-matrix="default inherited" */
+.waf-theme.default .waf-matrix.waf-role-matrix {
+	background-color: rgb(238, 238, 238);
+	border-width: 0px;
+}
+ 
+ /************************************
+ **				Login				**
+ *************************************/
+
+.waf-theme.default .waf-login-logout a,
+.waf-theme.default .waf-login-login a{
+	color: #51a5e5;
+}
+
+ /************************************
+ **				Text Field			**
+ *************************************/
+
+/* @theme:waf-role-smTextField="default inherited" */
+.waf-theme.default .waf-textField.waf-role-smTextField {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	border-color: rgb(230, 230, 230);
+	background-color: rgb(255, 255, 255);
+	color: rgb(103, 103, 103);
+	font-size: 15px;
+	background-image:none;
+	text-shadow: none;
+}
+
+/* @theme:waf-role-smTextFieldLogin="default inherited" */
+.waf-theme.default .waf-textField.waf-role-smTextFieldLogin {
+	border-top-style: none;
+	border-left-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	box-shadow: rgba(0, 0, 0, 0.0664063) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.0664063) 0px 0px 0px 0px inset;
+	-moz-box-shadow: rgba(0, 0, 0, 0.0664063) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.0664063) 0px 0px 0px 0px inset;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0664063) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.0664063) 0px 0px 0px 0px inset;
+	-moz-border-top-left-radius: 4px;
+	-webkit-border-top-left-radius: 4px;
+	border-top-left-radius: 4px;
+	-moz-border-top-right-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
+	-moz-border-bottom-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	color: rgb(88, 87, 87);
+	font-size: 14px;
+	font-weight: normal;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+}
+
+ /************************************
+ **				Button				**
+ *************************************/
+
+ /* @theme:waf-role-smButton="default inherited" */
+.waf-theme.default .waf-button.waf-role-smButton {
+	background-color: rgb(84, 164, 255);
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9IndhZi1pZS1ncmFkaWVudCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmZmZmZiIgb2Zmc2V0PSIwJSIgc3RvcC1vcGFjaXR5PSIwIiAvPjxzdG9wIHN0b3AtY29sb3I9IiNmZmZmZmYiIG9mZnNldD0iMTAwJSIgc3RvcC1vcGFjaXR5PSIwIiAvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCN3YWYtaWUtZ3JhZGllbnQpIiAvPjwvc3ZnPg==');
+	background-image: -webkit-gradient(linear,0% 0%, 0% 100%,color-stop(0, rgba(255,255,255,0)),color-stop(1, rgba(255,255,255,0)));
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%);
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%);
+	background-image: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%);
+	background-image: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%);
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%);
+	box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
+	-moz-box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
+	-webkit-box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.148438) 0px 0px 0px 0px;
+	color: rgb(255, 255, 255);
+	text-shadow: rgb(255, 255, 255) 0px 0px 0px;
+	font-size: 13px;
+	border-style: none;
+	border-color: transparent;
+	font-weight: normal;
+	border-width: 0px;
+	cursor: pointer;
+}
+
+ /* @theme:waf-role-btnAll="default inherited" */
+.waf-theme.default .waf-button.waf-role-btnAll {
+	background-color: rgb(146, 146, 146);
+	border-style: none;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	color: rgb(255, 255, 255);
+	text-shadow: rgb(255, 255, 255) 0px 0px 0px;
+	font-weight: bold;
+	font-size: 15px;
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9IndhZi1pZS1ncmFkaWVudCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmZmZmZiIgb2Zmc2V0PSIwJSIgc3RvcC1vcGFjaXR5PSIwIiAvPjxzdG9wIHN0b3AtY29sb3I9IiNmZmZmZmYiIG9mZnNldD0iMTAwJSIgc3RvcC1vcGFjaXR5PSIwIiAvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCN3YWYtaWUtZ3JhZGllbnQpIiAvPjwvc3ZnPg==');
+	background-image: -webkit-gradient(linear,0% 0%, 0% 100%,color-stop(0, rgba(255, 255, 255, 0)),color-stop(1, rgba(255, 255, 255, 0)));
+	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0) 100%);
+	background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0) 100%);
+	background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0) 100%);
+	background-image: linear-gradient(top, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0) 100%);
+	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0) 100%);
+	border-width: 0px;
+}
+
+ /************************************
+ **				Data Grid			**
+ *************************************/
+
+.waf-theme.default .waf-dataGrid.waf-role-smDataGrid {
+	border-top-color: rgb(237, 237, 237);
+	border-left-color: rgb(237, 237, 237);
+	border-right-color: rgb(237, 237, 237);
+	border-bottom-color: rgb(237, 237, 237);
+	box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 0px 0px 0px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-smDataGrid .waf-dataGrid-row.waf-state-selected {
+	color: rgb(103, 103, 103);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+	border-top-color: transparent;
+	border-top-style: none;
+	border-bottom-color: transparent;
+	border-bottom-style: none;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	background-color: rgb(152, 200, 255);
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-smDataGrid .waf-dataGrid-row.waf-state-active {
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	background-image: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	text-shadow: rgba(0, 0, 0, 0.292969) 0px 0px 0px;
+	color: rgb(103, 103, 103);
+	background-color: rgb(152, 200, 255);
+	border-left-width: 0px;
+	border-right-width: 0px;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-smDataGrid .waf-dataGrid-row.waf-state-active .waf-dataGrid-cell {
+	border-left-color: rgb(237, 237, 237);
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-smDataGrid .waf-dataGrid-row.waf-state-hover {
+	border-right-color: rgba(0, 0, 0, 0);
+	border-width: 0px;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+	border-right-color: transparent;
+	border-right-style: none;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	color: rgb(103, 103, 103);
+	background-color: rgb(152, 200, 255);
+	border-style: none;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-smDataGrid .waf-dataGrid-header {
+	background-image: url("data:image/svg+xml;base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9IndhZi1pZS1ncmFkaWVudCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmZmZmZiIgb2Zmc2V0PSIwJSIgc3RvcC1vcGFjaXR5PSIwIiAvPjxzdG9wIHN0b3AtY29sb3I9IiNmZmZmZmYiIG9mZnNldD0iMTAwJSIgc3RvcC1vcGFjaXR5PSIwIiAvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCN3YWYtaWUtZ3JhZGllbnQpIiAvPjwvc3ZnPg==");
+	background-image: -webkit-gradient(linear,0% 0%, 0% 100%,color-stop(0, rgba(255,255,255,0)),color-stop(1, rgba(255,255,255,0)));
+	background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%);
+	background-image: -moz-linear-gradient(bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%);
+	background-image: -ms-linear-gradient(bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%);
+	background-image: -o-linear-gradient(bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%);
+	background-image: linear-gradient(bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%);
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(237, 237, 237);
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-smDataGrid .waf-dataGrid-header .waf-dataGrid-cell {
+	color: rgb(26,24,24);
+	font-weight: normal;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-smDataGrid .waf-dataGrid-body .content {
+	color: rgb(103,103,103);
+} 
+
+ /************************************
+ **				File Uploader		**
+ *************************************/
+ 
+.waf-theme.default .waf-fileUpload.waf-role-smUploader {
+	border-style: none;
+	border-width: 0px;
+	background-color: transparent;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+/************************************
+**				File Uploader		**
+*************************************/
+
+.waf-theme.default .waf-login.waf-role-noStyle {
+	background-color: transparent;
+	border-style: none;
+	font-size: 12px;
+	border-width: 0px;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+ /**
+  * -------------------------------------------------------
+  * @Component jQueryUI
+  * -------------------------------------------------------
+  */
+body#waf-body .ui-widget {
+	font-size: 0.7em;
+}
+
+body#waf-body .ui-dialog[role=dialog] {
+	z-index: 10005 !important;
+}
+
+.containerMI.administration:hover:not(.disabled),
+.containerMI.administration.selected{
+	background-color: rgb(158, 217, 41);
+}
+
+.containerMI.home:hover:not(.disabled),
+.containerMI.home.selected{
+	background-color: #b82760;
+}
+
+.containerMI.agenda:hover:not(.disabled),
+.containerMI.agenda.selected{
+	background-color: #ffad10;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-widget .waf-dataGrid-header {
+	background-color: transparent;
+	background-image: none;
+	border-style: none;
+	height:22px !important;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-widget .waf-dataGrid-cell,
+.waf-theme.default .waf-dataGrid.waf-role-widget .waf-dataGrid-cell.waf-state-focus {
+	border-style: none;
+	font-weight: normal;
+	text-shadow: none;
+	color: #4D4D4D;
+	box-shadow: initial;
+	height: 100%;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-widget {
+	border-style: none;
+	box-shadow: initial;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-widget .waf-sort,
+.waf-theme.default .waf-dataGrid.waf-role-widget .resize{
+	display:none;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-widget .content{
+	padding: 0px;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-widget .waf-dataGrid-body{
+	top:22px !important;
+	background-color:transparent;
+	overflow:hidden !important;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-widget .waf-dataGrid-body:hover{
+	top:22px !important;
+	background-color:transparent;
+	overflow-y:auto !important;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-widget .waf-dataGrid-row,
+.waf-theme.default .waf-dataGrid.waf-role-widget .waf-dataGrid-row.waf-state-active,
+.waf-theme.default .waf-dataGrid.waf-role-widget .waf-dataGrid-row.waf-state-hover,
+.waf-theme.default .waf-dataGrid.waf-role-widget .waf-dataGrid-row.waf-widget-even{
+	background-image:none;
+	background-color:transparent;
+	height:50px !important;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-widget .waf-dataGrid-row .content{
+	display: inline;
+	vertical-align:middle;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-widget .waf-dataGrid-row.waf-state-active{
+	background-color: rgba(37, 160, 218, 0.1);
+	border-color: #25A0DA;
+	transition-property: background-color;
+	transition-duration: 0.5s;
+	transition-timing-fonction: linear;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-widget .waf-dataGrid-row.waf-state-hover:not(.waf-state-active){
+	background-color: rgba(103, 173, 206, 0.1);
+	border:none;
+	box-shadow: initial;
+	transition-property: background-color;
+	transition-duration: 0.2s;
+	transition-timing-fonction: linear;
+}
+
+.waf-theme.default .waf-dataGrid.waf-role-widget .waf-widget-footer,
+.waf-theme.default .waf-dataGrid.waf-role-widget .waf-dataGrid-footer{
+	background-color: rgba(0, 0, 0, 0);
+	background-image: initial;
+	box-shadow: initial;
+}
+
+/**
+ * -----------------------------------
+ * @subsection widget body scrollbar
+ * -----------------------------------
+ */
+/*scrollbar dimensions */
+
+.waf-theme.default .waf-widget-body::-webkit-scrollbar {
+    width: 6px;
+    box-shadow: none;
+    border:none;
+}
+
+.waf-theme.default .waf-widget-body::-webkit-scrollbar-button:start:decrement,
+.waf-theme.default .waf-widget-body::-webkit-scrollbar-button:end:increment {
+    display: none;
+}
+
+.waf-theme.default .waf-widget-body::-webkit-scrollbar-button:start:increment,
+.waf-theme.default .waf-widget-body::-webkit-scrollbar-button:end:decrement {
+    display: none;
+}
+
+
+/**
+ * -----------------------------------
+ * @subsubsection widget body scrollbar track
+ * -----------------------------------
+ */
+.waf-theme.default .waf-widget-body::-webkit-scrollbar-track {
+	background: none;
+	background-image: none;
+}
+
+
+/**
+ * -----------------------------------
+ * @subsubsection widget body scrollbar thumb
+ * -----------------------------------
+ */
+.waf-theme.default .waf-widget-body::-webkit-scrollbar-thumb {
+	border-width: 0px;
+	border-style: solid;
+    -webkit-border-radius: 0px;
+    background: #666; 
+}
+.waf-theme.default .waf-widget-body::-webkit-scrollbar-thumb:vertical {
+	background-image: none;
+
+	background-clip: content-box, border-box;
+	background-origin: content-box, border-box;
+	padding: 0px;
+}
+.waf-theme.default .waf-widget-body::-webkit-scrollbar-thumb:horizontal {
+	background-image: none;
+
+	background-clip: content-box, border-box;
+	background-origin: content-box, border-box;
+	padding: 0px;
+}
+
+
+/**
+ * -----------------------------------
+ * @subsubsection widget body scrollbar corner
+ * -----------------------------------
+ */
+.waf-theme.default .waf-widget-body::-webkit-scrollbar-corner {
+    background-image: none;
+}
