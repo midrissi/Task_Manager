@@ -23,6 +23,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		sources.user.all();
 	}
 	
+	function center(container){
+		$$(container).center({center : 'h'});
+		$(window).resize(function(){
+			$$(container).center({center : 'h'});
+		});
+	}
+	
 // eventHandlers// @lock
 
 	button1.click = function button1_click (event)// @startlock
@@ -48,9 +55,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
+		center('container1');
+		
 		dg.$domNode
 		.find('.waf-toolbar-element')
 		.unbind('click').click(function(e){
+			if(!waf.directory.currentUser()){
+				return false;
+			}
+			
 			switch($(this).attr('title')){
 				case 'Add':
 					sources.task.addNewElement();
