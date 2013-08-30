@@ -11,8 +11,7 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
-		var theSource = $comp.sources.comments,
-			theVar = $comp.sourcesVar.comm;
+		var theSource = $comp.sources.comments;
 	// @region namespaceDeclaration// @startlock
 	var image4 = {};	// @image
 	var image3 = {};	// @image
@@ -76,6 +75,12 @@ function constructor (id) {
 
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
+		var theVar = $comp.sourcesVar.comm;
+		
+		if(!theVar.title || !theVar.comment){
+			return;
+		}
+		
 		theSource.addNewElement();
 		for(var attr in theVar){
 			theSource[attr] = theVar[attr];
