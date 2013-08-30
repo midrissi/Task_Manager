@@ -13,7 +13,7 @@
 <allow action="update" groupName="administrator" groupID="9F72FF59962C45C6927133FCA718B315" resource="Model.Task.public" temporaryForcePermissions="false" type="attribute"/>
 <allow action="create" groupName="loggedIn" groupID="3F7A11D209E744E8A5C80EC679F02D9F" resource="Model.Comment" temporaryForcePermissions="false" type="dataClass"/>
 <allow action="update" groupName="loggedIn" groupID="3F7A11D209E744E8A5C80EC679F02D9F" resource="Model.Comment" temporaryForcePermissions="false" type="dataClass"/>
-<allow action="remove" groupName="administrator" groupID="9F72FF59962C45C6927133FCA718B315" resource="Model.Comment" temporaryForcePermissions="false" type="dataClass"/>
+<allow action="remove" groupName="loggedIn" groupID="3F7A11D209E744E8A5C80EC679F02D9F" resource="Model.Comment" temporaryForcePermissions="false" type="dataClass"/>
 <allow action="read" groupName="loggedIn" groupID="3F7A11D209E744E8A5C80EC679F02D9F" resource="Model.Task.editable" temporaryForcePermissions="false" type="attribute"/>
 <allow action="read" groupName="loggedIn" groupID="3F7A11D209E744E8A5C80EC679F02D9F" resource="Model.Comment.editable" temporaryForcePermissions="false" type="attribute"/>
 <allow action="promote" groupName="administrator" groupID="9F72FF59962C45C6927133FCA718B315" resource="Model.Task.getUserName" temporaryForcePermissions="false" type="method"/>

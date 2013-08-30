@@ -49,6 +49,21 @@ guidedModel =// @startlock
 		},
 		events :
 		{
+			onRemove:function()
+			{// @endlock
+				var curSession = currentSession();
+				
+				if(!curSession.belongsTo(groups.admin)){
+					var user = ds.User(sessionStorage.ID);
+					
+					if(user && this.user && this.user.getKey() === user.getKey()){
+						// Do Nothing
+					}
+					else{
+						return {error: 7, errorMessage: 'You are not allowed to remove this comment!'};
+					}
+				}
+			},// @startlock
 			onInit:function()
 			{// @endlock
 				var curSession = currentSession(),

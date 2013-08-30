@@ -27,6 +27,14 @@ body#waf-body .colorpicker {
 	z-index: 10;
 }
 
+body#waf-body .fullWidth{
+	width: 100% !important;
+}
+
+body#waf-body testarea.editable:not([readOnly]]){
+	border-style: solid !important;
+}
+
 body#waf-body .smColorPicker.nostyle {
 	background-color: transparent;
 	box-shadow: none;
@@ -463,6 +471,10 @@ body#waf-body select:not(.ui-datepicker-month):not(.ui-datepicker-year) {
 	font-size: 15px;
 	background-image:none;
 	text-shadow: none;
+}
+
+.waf-theme.default .waf-textField.waf-role-smTextField.editable[readOnly]{
+	border:none;
 }
 
 /* @theme:waf-role-smTextFieldLogin="default inherited" */

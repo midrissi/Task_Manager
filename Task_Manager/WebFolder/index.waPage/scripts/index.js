@@ -45,12 +45,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	login1.logout = function login1_logout (event)// @startlock
 	{// @endlock
-		refreshView();
+		location.reload();
 	};// @lock
 
 	login1.login = function login1_login (event)// @startlock
 	{// @endlock
-		refreshView();
+		location.reload();
 	};// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
