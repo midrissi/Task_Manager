@@ -1,0 +1,1 @@
+﻿currentSession().promoteWith('administrator');ds.User.all();;//ds.User.all();

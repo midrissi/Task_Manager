@@ -477,6 +477,10 @@ body#waf-body select:not(.ui-datepicker-month):not(.ui-datepicker-year) {
 	border:none;
 }
 
+.waf-theme.default .waf-textField.waf-role-smTextField.waf-state-disabled{
+	opacity:0.95;
+}
+
 /* @theme:waf-role-smTextFieldLogin="default inherited" */
 .waf-theme.default .waf-textField.waf-role-smTextFieldLogin {
 	border-top-style: none;

@@ -3,7 +3,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var tabView = $$('mainTab'),
 		dg = $$('tasksGrid'),
 		doneCol = dg.column('done'),
-		descCol = dg.column('description');
+		descCol = dg.column('description'),
+		titleCol = dg.column('title');
 		
 // @region namespaceDeclaration// @startlock
 	var button1 = {};	// @button
@@ -108,6 +109,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		
 		if(cell.value && cell.value.length > 100){
 			dom.text(cell.value.substr(0,100) + "...");
+		}
+		
+		cell = event.row.cells[titleCol.columnNumber];
+		dom = cell.dom;
+		
+		if(cell.value && cell.value.length > 20){
+			dom.text(cell.value.substr(0,20) + "...");
 		}
 	};// @lock
 

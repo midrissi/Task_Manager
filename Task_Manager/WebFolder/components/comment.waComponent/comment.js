@@ -88,6 +88,10 @@ function constructor (id) {
 					comment: ''
 				};
 				$comp.sources.comm.sync();
+			},
+			onError: function(ev){
+				theSource.cancel();
+				waf.ErrorManager.displayError(ev);
 			}
 		});
 		
