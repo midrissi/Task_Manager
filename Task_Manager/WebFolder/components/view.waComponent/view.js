@@ -34,11 +34,14 @@ function constructor (id) {
 		else{
 			$$(getHtmlId('edit')).hide();
 		}
+		
+		$comp.form = form;
 	// @region namespaceDeclaration// @startlock
 	var image1 = {};	// @image
+	var image2 = {};	// @image
 	var cancel = {};	// @button
 	var save = {};	// @button
-	var edit = {};	// @image
+	var editIcon = {};	// @image
 	var taskEvent = {};	// @dataSource
 	// @endregion// @endlock
 
@@ -46,6 +49,14 @@ function constructor (id) {
 
 	image1.click = function image1_click (event)// @startlock
 	{// @endlock
+		sources.task.removeCurrent();
+		tabView.selectTab(1);
+		sources.task.all();
+	};// @lock
+
+	image2.click = function image2_click (event)// @startlock
+	{// @endlock
+		sources.task.cancel();
 		form.disable();
 		tabView.selectTab(1);
 	};// @lock
@@ -54,6 +65,7 @@ function constructor (id) {
 	{// @endlock
 		sources.task.cancel();
 		form.disable();
+		tabView.selectTab(1);
 	};// @lock
 
 	save.click = function save_click (event)// @startlock
@@ -65,7 +77,7 @@ function constructor (id) {
 		});
 	};// @lock
 
-	edit.click = function edit_click (event)// @startlock
+	editIcon.click = function editIcon_click (event)// @startlock
 	{// @endlock
 		form.enable();
 	};// @lock
@@ -84,9 +96,10 @@ function constructor (id) {
 
 	// @region eventManager// @startlock
 	WAF.addListener(this.id + "_image1", "click", image1.click, "WAF");
+	WAF.addListener(this.id + "_image2", "click", image2.click, "WAF");
 	WAF.addListener(this.id + "_cancel", "click", cancel.click, "WAF");
 	WAF.addListener(this.id + "_save", "click", save.click, "WAF");
-	WAF.addListener(this.id + "_edit", "click", edit.click, "WAF");
+	WAF.addListener(this.id + "_editIcon", "click", editIcon.click, "WAF");
 	WAF.addListener("task", "onCurrentElementChange", taskEvent.onCurrentElementChange, "WAF");
 	// @endregion// @endlock
 

@@ -86,6 +86,13 @@ guidedModel =// @startlock
 	},
 	Task :
 	{
+		l_comments :
+		{
+			onGet:function()
+			{// @endlock
+				return this.comments.length;
+			}// @startlock
+		},
 		user_name :
 		{
 			onGet:function()

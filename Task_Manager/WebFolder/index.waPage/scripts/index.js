@@ -7,6 +7,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		titleCol = dg.column('title');
 		
 // @region namespaceDeclaration// @startlock
+	var button3 = {};	// @button
+	var image1 = {};	// @image
 	var button1 = {};	// @button
 	var login1 = {};	// @login
 	var documentEvent = {};	// @document
@@ -32,6 +34,18 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	}
 	
 // eventHandlers// @lock
+
+	button3.click = function button3_click (event)// @startlock
+	{// @endlock
+		dg.$domNode
+		.find('.waf-toolbar-element[title=Add]')
+		.click()
+	};// @lock
+
+	image1.click = function image1_click (event)// @startlock
+	{// @endlock
+		sources.task.all();
+	};// @lock
 
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
@@ -88,6 +102,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			return false;
 		});
 		
+		$$('image1')
+		.$domNode
+		.attr({
+			'data-original-title': "Refresh the task list"
+		})
+		.tooltip({
+            html: true
+        })
+		
 		refreshView();
 		dg.gridController.gridView._private.globals.rowHeight = 50;
 		dg.redraw();
@@ -107,15 +130,27 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		cell = event.row.cells[descCol.columnNumber];
 		dom = cell.dom;
 		
-		if(cell.value && cell.value.length > 100){
-			dom.text(cell.value.substr(0,100) + "...");
+		if(cell.value && cell.value.length > 70){
+			dom.attr({
+                'data-original-title': cell.value
+            }).tooltip({
+                html: true,
+            	container: 'body'
+            })
+            .text(cell.value.substr(0,70) + "...");
 		}
 		
 		cell = event.row.cells[titleCol.columnNumber];
 		dom = cell.dom;
 		
-		if(cell.value && cell.value.length > 20){
-			dom.text(cell.value.substr(0,20) + "...");
+		if(cell.value && cell.value.length > 60){
+			dom.attr({
+                'data-original-title': cell.value
+            }).tooltip({
+                html: true,
+            	container: 'body'
+            })
+            .text(cell.value.substr(0,60) + "...");
 		}
 	};// @lock
 
@@ -125,6 +160,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("button3", "click", button3.click, "WAF");
+	WAF.addListener("image1", "click", image1.click, "WAF");
 	WAF.addListener("tasksGrid", "onRowDraw", tasksGrid.onRowDraw, "WAF");
 	WAF.addListener("button1", "click", button1.click, "WAF");
 	WAF.addListener("login1", "logout", login1.logout, "WAF");
