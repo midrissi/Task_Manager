@@ -15,16 +15,27 @@
 		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="Task" data-lib="WAF" data-id="task" data-dataType="string" data-autoLoad="true" content="task"/>
 		
 		
-		<meta name="WAF.config.loadJS" content="scripts/index.js" id="waf-script"/>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<meta name="WAF.config.loadCSS" id="waf-interface-css" content="styles/index.css"/>
+		<meta name="WAF.config.loadCSS" id="waf-project-css" content="/application.css"/>
+		<meta name="WAF.config.loadCSS" content="/styles/bootstrap.min.css"/>
+		<meta name="WAF.config.loadCSS" content="/styles/progress-bar.css"/>
+		<meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
 		<meta name="WAF.config.loadJS" content="/scripts/utils.js"/>
 		<meta name="WAF.config.loadJS" content="/scripts/underscore.js"/>
-		<meta name="WAF.config.loadCSS" content="styles/index.css" id="waf-interface-css"/>
-		<meta name="WAF.config.loadCSS" content="/application.css" id="waf-project-css"/>
-		<meta name="WAF.config.loadCSS" content="/styles/progress-bar.css"/>
+		<meta name="WAF.config.loadJS" content="/scripts/bootstrap.min.js"/>
 </head>
 
 <body id="waf-body" data-workspace-width="0" data-workspace-orientation="portrait" data-workspace-height="0" data-viewport-width="device-width" data-viewport-minimum-scale="1.0" data-viewport-maximum-scale="1.0" data-viewport-initial-scale="1.0" data-type="document" data-theme="default" data-rpc-validation="false" data-rpc-namespace="rpc" data-rpc-activate="false" data-platform="desktop" data-lib="WAF" data-group="[['mainTab','menuBar1','container2','container3','container5']]" data-entire-model="false" data-apple-meta-tags-status-bar="default" style="bottom:;right:;visibility:hidden;">
-		<div id="container1" data-type="container" data-role="noStyle" data-lib="WAF" data-label-position="top" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="true" class="waf-widget waf-container waf-container-level-0 waf-level-0 waf-role-noStyle">
+		<div id="container1" data-type="container" data-role="noStyle" data-lib="WAF" data-label-position="top" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-container waf-container-level-0 waf-level-0 waf-role-noStyle">
 	 	<div id="mainTab" data-type="tabView" data-padding="5" data-menu-position="top left" data-linked-tag="menuBar1,container2,container3,container5" data-lib="WAF" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="true" class="waf-widget waf-tabView ">
 	 	 	<ul id="menuBar1" data-type="menuBar" data-tab-margin="5" data-subMenuShow="hover" data-linked-tag="tabView1" data-lib="WAF" data-level="0" data-hideonload="true" data-display="horizontal" data-context="['protected']" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-menuBar waf-tabView-menuBar waf-tabView-menuBar-top-left">
 	 	 	 	<li id="menuItem1" data-type="menuItem" data-linked-tag="richText1,container2" data-lib="WAF" data-context="['protected','allowDrop','allowRemove']" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-menuItem waf-menuItem-level-0 waf-level-0">
@@ -38,11 +49,11 @@
  	 	 	 	</li>
  	 	 	</ul>
  	 		<div id="container2" data-type="container" data-role="noStyle" data-linked-tag="menuItem1" data-lib="WAF" data-label-position="top" data-label="" data-context="['protected','allowDrop','allowBind']" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="true" class="waf-widget waf-container waf-container-level-1 waf-level-1 waf-tabView-container-level-0 waf-role-noStyle">
-	 	 	 	<div id="tasksGrid" data-type="dataGrid" data-selection-mode="single" data-role="widget" data-lib="WAF" data-label-position="top" data-label="" data-footer-text="item(s)" data-display-error="false" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="true" data-column="[{'sourceAttID':'title','colID':'title','width':'150','title':'Title'},{'sourceAttID':'user_name','colID':'user_name','width':'150','title':'User','readOnly':'true'},{'sourceAttID':'creationDate','colID':'creationDate','width':'150','title':'Date','readOnly':'true'},{'sourceAttID':'description','colID':'description','width':'550','title':'Description'},{'sourceAttID':'done','colID':'done','width':'150','title':'Progress','readOnly':'true'}]" data-binding="task" class="waf-widget waf-dataGrid waf-role-widget"></div>
+	 	 	 	<div id="tasksGrid" data-type="dataGrid" data-selection-mode="single" data-role="widget" data-lib="WAF" data-label-position="top" data-label="" data-footer-text="item(s)" data-display-error="false" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-column="[{'sourceAttID':'title','colID':'title','width':'280','title':'Title'},{'sourceAttID':'user_name','colID':'user_name','width':'150','title':'User','readOnly':'true'},{'sourceAttID':'creationDate','colID':'creationDate','width':'85','title':'Date','readOnly':'true'},{'sourceAttID':'description','colID':'description','width':'400','title':'Description'},{'sourceAttID':'l_comments','colID':'l_comments','width':'55','title':'Nb.%20Cmts','readOnly':'true'},{'sourceAttID':'done','colID':'done','width':'150','title':'Progress','readOnly':'true'}]" data-binding="task" class="waf-widget waf-dataGrid waf-role-widget"></div>
  	 	 	</div>
  	 		<div id="container3" data-type="container" data-role="noStyle" data-linked-tag="menuItem2" data-lib="WAF" data-label-position="top" data-label="" data-context="['protected','allowDrop','allowBind']" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="true" class="waf-widget waf-container waf-container-level-1 waf-level-1 waf-tabView-container-level-0 waf-role-noStyle">
 	 	 	 	<div id="taskCompo" data-type="component" data-start-load="false" data-path="/components/view.waComponent" data-lib="WAF" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-component "></div>
- 	 	 		<div id="component2" data-type="component" data-start-load="false" data-lib="WAF" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="true" class="waf-widget waf-component " data-path="/components/comment.waComponent"></div>
+ 	 	 		<div id="component2" data-type="component" data-start-load="false" data-path="/components/comment.waComponent" data-lib="WAF" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="true" class="waf-widget waf-component "></div>
  	 	 	</div>
  	 			<div id="container5" data-type="container" data-role="noStyle" data-linked-tag="menuItem4" data-lib="WAF" data-label-position="top" data-label="" data-context="['protected','allowDrop','allowBind']" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="true" class="waf-widget waf-container waf-container-level-1 waf-level-1 waf-tabView-container-level-0 waf-role-noStyle">
 	 	 	 	<div id="component3" data-type="component" data-start-load="false" data-path="/components/profile.waComponent" data-lib="WAF" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="true" class="waf-widget waf-component "></div>
@@ -50,6 +61,10 @@
  	 	</div>
  		<div id="login1" data-user-label="User: " data-user-display="Signed in as " data-type="login" data-role="noStyle" data-password-label="Password: " data-logout-action="Logout" data-login-title="Login Dialog" data-login-button="Login" data-login-action="Login" data-lib="WAF" data-constraint-top="true" data-constraint-right="true" data-constraint-left="false" data-constraint-bottom="false" class="waf-widget waf-login waf-role-noStyle"></div>
  			<button id="button1" data-type="button" data-text="Signup" data-target="_blank" data-role="smButton" data-lib="WAF" data-hideonload="false" data-constraint-top="true" data-constraint-right="true" data-constraint-left="false" data-constraint-bottom="false" data-action="simple" class="waf-widget waf-button waf-role-smButton"></button>
+ 		<button id="button3" data-type="button" data-text="New Task" data-target="_blank" data-role="smButton" data-lib="WAF" data-hideonload="false" data-constraint-top="true" data-constraint-right="true" data-constraint-left="false" data-constraint-bottom="false" data-action="simple" class="waf-widget waf-button waf-role-smButton"></button>
+			<span id="icon2" data-type="icon" data-lib="WAF" data-label-position="left" data-label="" data-image-state4="/images/profile.png" data-image-state3="/images/profile.png" data-image-state2="/images/profile.png" data-image-state1="/images/profile.png" data-icon-type="images" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-icon "><img src="/images/profile.png" class="waf-icon-state1"/><img src="/images/profile.png" class="waf-icon-state2"/><img src="/images/profile.png" class="waf-icon-state3"/><img src="/images/profile.png" class="waf-icon-state4"/></span>
+ 			<span id="icon4" data-type="icon" data-lib="WAF" data-label-position="left" data-label="" data-image-state4="/images/002_19.png" data-image-state3="/images/002_19.png" data-image-state2="/images/002_19.png" data-image-state1="/images/002_19.png" data-icon-type="images" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-icon "><img src="/images/002_19.png" class="waf-icon-state1"/><img src="/images/002_19.png" class="waf-icon-state2"/><img src="/images/002_19.png" class="waf-icon-state3"/><img src="/images/002_19.png" class="waf-icon-state4"/></span>
+ 		<div id="image1" data-type="image" data-target="_blank" data-src="/images/reload.png" data-lib="WAF" data-label-position="left" data-label="" data-fit="0" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-image isLink"></div>
  	</div>
 		<script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
 	</body>

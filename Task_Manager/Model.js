@@ -6,8 +6,103 @@
 
 guidedModel =// @startlock
 {
+	Vote :
+	{
+		events :
+		{
+			onValidate:function()
+			{// @endlock
+				var curSession = currentSession();
+				
+				if(!this.isNew() && !curSession.belongsTo(groups.admin) && sessionStorage.ID !== this.getKey()){
+					return {error: 3, errorMessage: 'You are not allowed to modify this user!'};
+				}
+				
+				if(!curSession.belongsTo(groups.admin)){
+					this.group = 'loggedIn';
+				}
+				
+				if(this.firstname){
+					this.firstname = formatter.formatString(this.firstname, "c");
+				}
+				
+				if(this.lastname){
+					this.lastname = formatter.formatString(this.lastname, "U");
+				}
+			},// @startlock
+			onInit:function()
+			{// @endlock
+				this.like = true;
+			}// @startlock
+		}
+	},
 	Comment :
 	{
+		can_dislike :
+		{
+			onGet:function()
+			{// @endlock
+				try{
+					var user = ds.User(sessionStorage.ID);
+				
+					if(user){
+						var vote = ds.Vote.find('user.ID == :1 && comment.ID == :2', user.getKey(), this.getKey());
+						
+						if(user.getKey() == this.user.getKey() && !vote){
+							return false;
+						}
+						
+						if(!vote){
+							return true;
+						}else if(vote && vote.like){
+							return true;
+						}
+						
+						return false;
+					}
+				}catch(e){
+					
+				}
+				
+				return false;
+			}// @startlock
+		},
+		can_like :
+		{
+			onGet:function()
+			{// @endlock
+				try{
+					var user = ds.User(sessionStorage.ID);
+				
+					if(user){
+						var vote = ds.Vote.find('user.ID == :1 && comment.ID == :2', user.getKey(), this.getKey());
+						
+						if(!vote){
+							return true;
+						}else if(vote && !vote.like){
+							return true;
+						}
+						
+						return false;
+					}
+				}catch(e){
+					
+				}
+				
+				return false;
+			}// @startlock
+		},
+		total_votes :
+		{
+			onGet:function()
+			{// @endlock
+				var res = 0;
+				this.votes.forEach(function(vote){
+					res += vote.like ? 1: -1;
+				});
+				return res;
+			}// @startlock
+		},
 		user_name :
 		{
 			onGet:function()
@@ -17,6 +112,64 @@ guidedModel =// @startlock
 		},
 		entityMethods :
 		{// @endlock
+			like:function(like)
+			{// @lock
+				var curSession = currentSession(),
+					result = {
+						status: 'ko'
+					};
+				
+				if(sessionStorage.ID){
+					var user = ds.User(sessionStorage.ID);
+					
+					if(!user){
+						result.errors = ['Unknown user!'];
+						return result;
+					}
+					
+					var vote = ds.Vote.find('user.ID == :1 && comment.ID == :2', user.getKey(), this.getKey());
+					
+					if(like !== false){
+						if(this.can_like){
+							if(!vote){
+								new ds.Vote({
+									user: user,
+									comment: this,
+									like: true
+								}).save();
+							}else{
+								vote.remove();
+							}
+							
+							return true;
+						}else{
+							result.errors = ['You can not like this comment!'];
+							return result;
+						}
+					}else{
+						if(this.can_dislike){
+							if(!vote){
+								new ds.Vote({
+									user: user,
+									comment: this,
+									like: false
+								}).save();
+							}else{
+								vote.remove();
+							}
+							return true;
+						}else{
+							result.errors = ['You can not dislike this comment!'];
+							return result;
+						}
+					}
+				}else{
+					result.errors = ['Not connected!'];
+					return result;
+				}
+				
+				return result;
+			},// @lock
 			getUserName:function()
 			{// @lock
 				if(!this.user){
