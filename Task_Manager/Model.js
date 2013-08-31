@@ -38,6 +38,20 @@ guidedModel =// @startlock
 	},
 	Comment :
 	{
+		u_likes :
+		{
+			onGet:function()
+			{// @endlock
+				return JSON.stringify(this.getLikes().likes);
+			}// @startlock
+		},
+		u_dislikes :
+		{
+			onGet:function()
+			{// @endlock
+				return JSON.stringify(this.getLikes().dislikes);
+			}// @startlock
+		},
 		can_dislike :
 		{
 			onGet:function()
@@ -112,6 +126,21 @@ guidedModel =// @startlock
 		},
 		entityMethods :
 		{// @endlock
+			getLikes:function()
+			{// @lock
+				var result = {
+					likes: [],
+					dislikes: []
+				};
+				
+				this.votes.forEach(function(vote){
+					if(vote.user){
+						result[vote.like?'likes':'dislikes'].push(vote.user.fullname);
+					}
+				});
+				
+				return result;
+			},// @lock
 			like:function(like)
 			{// @lock
 				var curSession = currentSession(),

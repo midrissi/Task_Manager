@@ -11,7 +11,8 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
-		var theSource = $comp.sources.comments;
+		var theSource = $comp.sources.comments,
+			t_likes = _.template('<div><% _.each(items, function(item){%><div><%= item %></div><%})%></div>');
 	// @region namespaceDeclaration// @startlock
 	var dislike = {};	// @image
 	var like = {};	// @image
@@ -48,16 +49,19 @@ function constructor (id) {
 	dislike.click = function dislike_click (event)// @startlock
 	{// @endlock
 		var theSource = $comp.sources.comments;
-		debugger;
 		
 		theSource.like({
 			onSuccess: function(e){
 				if(e.result === true){
-					theSource.serverRefresh({forceReload: true});
+					theSource.serverRefresh({
+						forceReload: true,
+						onSuccess: function(){
+							theSource.dispatch('onCollectionChange');
+						}
+					});
 				}
-			},
-			params: [false]
-		});
+			}
+		}, false);
 	};// @lock
 
 	like.click = function like_click (event)// @startlock
@@ -67,7 +71,12 @@ function constructor (id) {
 		theSource.like({
 			onSuccess: function(e){
 				if(e.result === true){
-					theSource.serverRefresh({forceReload: true});
+					theSource.serverRefresh({
+						forceReload: true,
+						onSuccess: function(){
+							theSource.dispatch('onCollectionChange');
+						}
+					});
 				}
 			}
 		});
@@ -92,7 +101,9 @@ function constructor (id) {
 	matrix1.onChildrenDraw = function matrix1_onChildrenDraw (event)// @startlock
 	{// @endlock
 		var $el = event.htmlObject,
-			$img = $el.find('[data-ref=' + getHtmlId('image1') + ']');
+			$img = $el.find('[data-ref=' + getHtmlId('image1') + ']'),
+			$like = $el.find('[data-ref=' + getHtmlId('like') + ']'),
+			$dislike = $el.find('[data-ref=' + getHtmlId('dislike') + ']');
 		
 		$el.find('[data-ref=' + getHtmlId('container3') + ']').hide();
 		
@@ -102,28 +113,48 @@ function constructor (id) {
 			$img.show();
 		}
 		
-		console.log(event.source.can_like);
-		
-		if(!event.source.like){
-			var $like = $el.find('[data-ref=' + getHtmlId('like') + ']');
+		if(!event.source.can_like){
 			if($like.length){
-				$$($like.attr('id')).disable();
-				$like.css({
-					opacity: 0.5
+				$like.unbind('click').css({
+					opacity: 0.1
 				});
 			}
 		}
+				
+		var likes = JSON.parse(event.source.u_likes);
 		
-		console.log(event.source.can_dislike);
+		if(likes.length){
+			$like.attr({
+				'data-original-title': t_likes({
+					items: likes
+				})
+			})
+			.tooltip({
+	            html: true,
+    			container: 'body'
+	        });
+		}
 		
 		if(!event.source.can_dislike){
-			var $dislike = $el.find('[data-ref=' + getHtmlId('dislike') + ']');
 			if($dislike.length){
-				$$($dislike.attr('id')).disable();
-				$dislike.css({
-					opacity: 0.5
+				$dislike.unbind('click').css({
+					opacity: 0.1
 				});
 			}
+		}
+				
+		var dislikes = JSON.parse(event.source.u_dislikes);
+		
+		if(dislikes.length){
+			$dislike.attr({
+				'data-original-title': t_likes({
+					items: dislikes
+				})
+			})
+			.tooltip({
+	            html: true,
+    			container: 'body'
+	        });
 		}
 	};// @lock
 

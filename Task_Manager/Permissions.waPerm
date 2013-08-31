@@ -22,4 +22,5 @@
 <allow action="update" groupName="administrator" groupID="9F72FF59962C45C6927133FCA718B315" resource="Model.Vote" temporaryForcePermissions="false" type="dataClass"/>
 <allow action="remove" groupName="administrator" groupID="9F72FF59962C45C6927133FCA718B315" resource="Model.Vote" temporaryForcePermissions="false" type="dataClass"/>
 <allow action="promote" groupName="administrator" groupID="9F72FF59962C45C6927133FCA718B315" resource="Model.Comment.like" temporaryForcePermissions="false" type="method"/>
+<allow action="promote" groupName="administrator" groupID="9F72FF59962C45C6927133FCA718B315" resource="Model.Comment.getLikes" temporaryForcePermissions="false" type="method"/>
 </permissions>
