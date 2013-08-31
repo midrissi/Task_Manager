@@ -123,7 +123,7 @@ function constructor (id) {
 				
 		var likes = JSON.parse(event.source.u_likes);
 		
-		if(likes.length){
+		if(likes && likes.length){
 			$like.attr({
 				'data-original-title': t_likes({
 					items: likes
@@ -145,7 +145,7 @@ function constructor (id) {
 				
 		var dislikes = JSON.parse(event.source.u_dislikes);
 		
-		if(dislikes.length){
+		if(dislikes && dislikes.length){
 			$dislike.attr({
 				'data-original-title': t_likes({
 					items: dislikes
