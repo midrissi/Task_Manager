@@ -124,7 +124,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		if(!isNaN(cell.value)){
 			dom
 			.addClass('progress progress-striped active')
-			.html('<div class="progress-bar progress-bar-info" style="width: ' + parseInt(cell.value) + '%;top: 15px;bottom: 15px;height: auto;"></div>')
+			.html('<div class="progress-bar progress-bar-info" style="width: ' + parseInt(cell.value) + '%;top: 15px;bottom: 15px;height: auto;">' + cell.value + '%</div>')
 		}
 		
 		cell = event.row.cells[descCol.columnNumber];

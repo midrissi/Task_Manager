@@ -393,11 +393,11 @@ body#waf-body select:not(.ui-datepicker-month):not(.ui-datepicker-year) {
 	/*background-color: rgba(202, 202, 202, 0.42);*/;
 }
 
-.waf-theme.default .waf-container.waf-role-matrixItem:hover .showOnHover {
+.waf-theme.default .waf-container:hover .showOnHover {
 	visibility: visible;
 }
 
-.waf-theme.default .waf-container.waf-role-matrixItem .showOnHover {
+.waf-theme.default .waf-container .showOnHover {
 	visibility: hidden;
 }
 
