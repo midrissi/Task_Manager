@@ -119,7 +119,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	tasksGrid.onRowDraw = function tasksGrid_onRowDraw (event)// @startlock
 	{// @endlock
 		var	cell = event.row.cells[doneCol.columnNumber],
-			dom = cell.dom;
+			dom = cell.dom,
+			html;
 			
 		if(!isNaN(cell.value)){
 			dom
@@ -137,7 +138,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
                 html: true,
             	container: 'body'
             })
-            .text(cell.value.substr(0,70) + "...");
+            .html(cell.value.substr(0,70) + "...");
 		}
 		
 		cell = event.row.cells[titleCol.columnNumber];
@@ -150,7 +151,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
                 html: true,
             	container: 'body'
             })
-            .text(cell.value.substr(0,60) + "...");
+            .html(cell.value.substr(0,60) + "...");
+		}
+		
+		if(event.element && event.element.finished){
+			event.row.dom.css({
+				'text-decoration': 'line-through'
+			});
 		}
 	};// @lock
 

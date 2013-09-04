@@ -16,6 +16,7 @@ function constructor (id) {
 			$$(getHtmlId('title')),
 			$$(getHtmlId('done_slider')),
 			$$(getHtmlId('description')),
+			$$(getHtmlId('finished')),
 			$$(getHtmlId('save')),
 			$$(getHtmlId('cancel'))
 		]),
