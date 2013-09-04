@@ -23,4 +23,9 @@
 <allow action="remove" groupName="administrator" groupID="9F72FF59962C45C6927133FCA718B315" resource="Model.Vote" temporaryForcePermissions="false" type="dataClass"/>
 <allow action="promote" groupName="administrator" groupID="9F72FF59962C45C6927133FCA718B315" resource="Model.Comment.like" temporaryForcePermissions="false" type="method"/>
 <allow action="promote" groupName="administrator" groupID="9F72FF59962C45C6927133FCA718B315" resource="Model.Comment.getLikes" temporaryForcePermissions="false" type="method"/>
+<allow action="read" groupName="loggedIn" groupID="3F7A11D209E744E8A5C80EC679F02D9F" resource="Model.Task" temporaryForcePermissions="false" type="dataClass"/>
+<allow action="read" groupName="loggedIn" groupID="3F7A11D209E744E8A5C80EC679F02D9F" resource="Model.Comment" temporaryForcePermissions="false" type="dataClass"/>
+<allow action="update" groupName="loggedIn" groupID="3F7A11D209E744E8A5C80EC679F02D9F" resource="Model.User" temporaryForcePermissions="false" type="dataClass"/>
+<allow action="create" groupName="administrator" groupID="9F72FF59962C45C6927133FCA718B315" resource="Model.User" temporaryForcePermissions="false" type="dataClass"/>
+<allow action="read" groupName="loggedIn" groupID="3F7A11D209E744E8A5C80EC679F02D9F" resource="Model.Vote" temporaryForcePermissions="false" type="dataClass"/>
 </permissions>
