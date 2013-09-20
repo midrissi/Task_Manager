@@ -161,6 +161,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			event.row.dom.css({
 				'text-decoration': 'line-through'
 			});
+		}else{
+			event.row.dom.css({
+				'text-decoration': 'initial'
+			});
 		}
 	};// @lock
 
