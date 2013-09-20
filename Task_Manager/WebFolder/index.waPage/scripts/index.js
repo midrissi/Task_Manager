@@ -156,6 +156,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
             })
             .text(cell.value.substr(0,60) + "...");
 		}
+		
+		if(event.element.finished){
+			event.row.dom.css({
+				'text-decoration': 'line-through'
+			});
+		}
 	};// @lock
 
 	tasksGrid.onRowDblClick = function tasksGrid_onRowDblClick (event)// @startlock
