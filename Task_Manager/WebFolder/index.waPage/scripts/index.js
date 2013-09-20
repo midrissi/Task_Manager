@@ -118,14 +118,17 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	tasksGrid.onRowDraw = function tasksGrid_onRowDraw (event)// @startlock
 	{// @endlock
+		if(!event.element){
+			return;
+		}
+		
 		var	cell = event.row.cells[doneCol.columnNumber],
-			dom = cell.dom,
-			html;
+			dom = cell.dom;
 			
 		if(!isNaN(cell.value)){
 			dom
 			.addClass('progress progress-striped active')
-			.html('<div class="progress-bar progress-bar-info" style="width: ' + parseInt(cell.value) + '%;top: 15px;bottom: 15px;height: auto;">' + cell.value + '%</div>')
+			.html('<div class="progress-bar progress-bar-info" style="width: ' + parseInt(cell.value) + '%;top: 15px;bottom: 15px;height: auto;"></div>')
 		}
 		
 		cell = event.row.cells[descCol.columnNumber];
@@ -138,7 +141,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
                 html: true,
             	container: 'body'
             })
-            .html(cell.value.substr(0,70) + "...");
+            .text(cell.value.substr(0,70) + "...");
 		}
 		
 		cell = event.row.cells[titleCol.columnNumber];
@@ -151,13 +154,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
                 html: true,
             	container: 'body'
             })
-            .html(cell.value.substr(0,60) + "...");
-		}
-		
-		if(event.element && event.element.finished){
-			event.row.dom.css({
-				'text-decoration': 'line-through'
-			});
+            .text(cell.value.substr(0,60) + "...");
 		}
 	};// @lock
 

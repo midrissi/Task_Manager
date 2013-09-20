@@ -74,6 +74,7 @@ function constructor (id) {
 		sources.task.save({
 			onSuccess: function(){
 				form.disable();
+				sources.task.orderBy('lastModification desc')
 			}
 		});
 	};// @lock
